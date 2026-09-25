@@ -1099,7 +1099,7 @@ async function startAnalysis(){
       pct.innerHTML="40%";
       status.innerHTML="Running AI Model...";
 
-      const response=await fetch("http://127.0.0.1:5000/predict",{
+      fetch(`${API_URL}/predict`, {
 
           method:"POST",
           body:formData
@@ -1263,7 +1263,7 @@ async function registerUser() {
 
     try {
 
-        const response = await fetch("http://127.0.0.1:5000/register", {
+        fetch(`${API_URL}/register`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -1320,7 +1320,7 @@ async function loginUser() {
 
     try {
 
-        const response = await fetch("http://127.0.0.1:5000/login", {
+        fetch(`${API_URL}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
